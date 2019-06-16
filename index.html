@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Supplier Renumerator</title>
+        <link rel="stylesheet"  href="style.css">
+        <script src="main.js"></script>
+        <script src="app.js"></script>
+        <script src='https://js.paystack.co/v1/inline.js'></script>
+    </head>
+    <body>
+        <form id="paymentForm" action="https://api.paystack.co/transferrecipient" method="POST">
+                <div class="app-container">
+                        <div class="payment-details">
+                            <p> Pay with Paystack</p>
+                            <div class="name-field-group">
+                                <label>Name</label><br>
+                                <input type="text" class="name-field" placeholder="Enter supplier name">
+                            </div>
+                            <div class="firm-field-group">
+                                    <label for="firm">Firm</label><br>
+                                    <input type="text" class="firm-field" placeholder="Name of firm">
+                            </div>
+                            <div class="bank-field-group">
+                                    <label for="bank">Bank</label><br>
+                                    <select id="banks">
+                                        <option  value="blankSpace"><span class="blanl">--choose bank--</option>
+                                        <option value="accessBank">Access Bank </option>
+                                        <option value="fidelityBank">Fidelity Bank </option>
+                                        <option value="fcmbBank">FCMB </option>
+                                        <option value="gtBank">GTB</option>
+                                        <option value="ubBank">Union Bank</option>
+                                        <option value="ubaBank">UBA</option>
+                                        <option value="zenithBank">Zenith Bank</option>
+                                    </select>
+                                    
+                            </div>
+                            <div class="accno-field-group">
+                                    <label for="accno">Account Number</label><br>
+                                    <input type="text" class="accno-field" placeholder="xxxxxxxxxx">
+                            </div>
+                            <div class="amount-field-group">
+                                <label for="amount">Amount</label><br>
+                                <input type="number" class="amount-field" placeholder="Amount in NGN">
+                        </div>
+                            <button type="pay-button" class="pay-btn" onclick="submitPaymentForm()">Pay Now</button>
+                        </div>
+                    </div>
+        </form>
+        
+    </body>
+</html>
